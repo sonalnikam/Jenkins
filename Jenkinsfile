@@ -6,10 +6,10 @@ node {
 	git 'https://github.com/sonalnikam/Jenkins'
    
    }
-	stage('Mvn Package'){
+   stage('Mvn Package'){
 	   // Build using maven
-	        def mh = tool name: 'MAVEN_HOME', type: 'maven'
-		sh "${mh}/bin/mvn package"
+	def mh = tool name: 'MAVEN_HOME', type: 'maven'
+	sh "${mh}/bin/mvn package"
    }
 }
  
